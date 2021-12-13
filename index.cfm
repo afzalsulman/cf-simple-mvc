@@ -26,32 +26,3 @@
 <cfelse>
     <cfoutput>#request.pageContent#</cfoutput>
 </cfif>
-
-<!--- <cfscript>
-	// 
-	include "models/applicationHelper.cfm";
-	// call request handler
-	requestHandler();
-
-	try{
-
-		// call security check
-		apiSecurity();
-
-		if(request.isValidRequest){
-			// create the handler object
-			createObjHandler = createObject("component", "handlers/#request.handler#").init();
-			// call specific function of handler for each request
-			objHandler = createObjHandler[request.action](argumentCollection=form);
-			// pass form struct
-			// objHandler(argumentCollection=form);
-		}
-
-	}catch(any e){
-		errorMessage = e.message & " " & e.detail & " " & e.tagcontext[1].LINE;
-		request.messages = request.messages.append('A error occured. '&errorMessage);
-	}
-
-	// call response handler
-	responseHandler();
-</cfscript> --->
